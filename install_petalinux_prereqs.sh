@@ -65,6 +65,7 @@ else
         sudo touch /var/lib/tftpboot
         sudo chown -R tftp /var/lib/tftpboot
         sudo chown -R tftp /srv/tftp/
+        sudo dpkg-reconfigure dash
     else
         echo "Wrong password"
         exit 1

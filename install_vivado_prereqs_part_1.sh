@@ -1,8 +1,16 @@
+# Need to hold the kernal and updates from happening
+sudo apt-mark hold linux-generic
+sudo apt-mark hold linux-image-generic
+sudo apt-mark hold linux-headers-generic
+sudo apt-mark hold linux-image-6.2.0-26-generic
+sudo apt-mark hold linux-headers-6.2.0-26-generic
+sudo apt update -y
+
 sudo snap install htop -y   # nice to have
 sudo apt install build-essential -y
 sudo apt install openssh-server -y
 sudo apt install libstdc++6 libgtk2.0-0 dpkg-dev python-pip libtinfo5 libncurses5 -y
-sudo ln -s /usr/bin/make /usr/bin/gmake
+# sudo ln -s /usr/bin/make /usr/bin/gmake    # Maybe don't need?
 
 # Some more libraries listed from the following help articles
 # https://support.xilinx.com/s/question/0D52E00006iHjbcSAC/vivado-20211-installation-hangs-at-generating-installed-device-list?language=en_US
