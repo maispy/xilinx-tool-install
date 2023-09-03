@@ -165,3 +165,64 @@ ls -al
 cd ./Downloads/
 ./Xilinx_Unified_2023.1_0507_1903_Lin64.bin 
 gedit ./Downloads/install_petalinux_prereq.sh 
+vi ./.bash_history 
+gedit ./.bash_history 
+cd ./Downloads/
+ls -al
+./Xilinx_Unified_2023.1_0507_1903_Lin64.bin
+cd ../
+ls -al
+rm ./vivado*
+ls -al
+rm ./upgrade_project_migration_report.log vitis_hls.log 
+ls -al
+cd ./repos/
+ls -al
+cd ./Arty-Z7-20-OOB/
+ls -al
+source /home/user/opt/Petalinux/settings.sh 
+ls -al ./repo/
+ls -al ./src/
+petalinux-create --type project --template zynq --name peta_os
+cd ./peta_os/
+cd ..
+find ./ -name *.xsa
+ls -al
+rm -rf ./peta_os/
+cd ./hw/
+petalinux-create --type project --template zynq --name peta_os
+petalinux-config --get-hw-decription ./design_1_wrapper.xsa
+petalinux-config --get-hw-description ./design_1_wrapper.xsa
+petalinux-config --get-hw-description ../design_1_wrapper.xsa
+cd ./peta_os/
+petalinux-config --get-hw-description ../design_1_wrapper.xsa
+cd ..
+rm -rf ./peta_os/
+petalinux-create --type project --template zynq --name peta_os
+cd ./peta_os/
+petalinux-config --get-hw-description ../
+petalinux-config -c kernel
+petalinux-config -c rootfs
+petalinux-build 
+petalinux-build --help
+petalinux-build
+ls /
+ls -al ./
+ls /var/lib/tftpboot 
+ls -al /var/lib/tftpboot 
+cat /etc/group
+sudo usermod -a -G tftp user
+htop
+cd ./repos/Arty-Z7-20-OOB/hw/
+ls -al
+cd ./peta_os/
+source /home/user/opt/Petalinux/settings.sh 
+petalinux-build 
+ls -al /etc/
+petalinux-build 
+petalinux-config 
+petalinux-build 
+petalinux-package --boot --fsbl ./images/linux/zynq_fsbl.elf --fpga ./images/linux/system.bit --u-boot
+mkdir /home/user/opt/tftpboot
+cd /home/user/opt/Petalinux/
+find ./ -name *downloads*

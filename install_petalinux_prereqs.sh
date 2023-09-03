@@ -1,9 +1,12 @@
 #!/bin/bash
 #
 # Libraries for running called out in ??? (some official Xilinx doc)
+# 
+# Relevant User Guides (UG):
+# UG1144 - Petalinux Tools Reference Guide
 #
 
-pkgs_1=(\
+pkgs=(\
 "iproute2" \
 "gcc" \
 "g++" \
@@ -28,9 +31,6 @@ pkgs_1=(\
 "automake" \
 "screen" \
 "pax" \
-)
-
-pkgs_2=(\
 "gawk" \
 "python3" \
 "python3-pexpect" \
@@ -58,9 +58,7 @@ if [[ "$EUID" = 0 ]]; then
 else
     sudo -k # make sure to ask for password on next sudo
     if sudo true; then
-        sudo apt install -y "${pkgs_1[@]}"
-        sudo apt install -y libstdc++6          # The ++ messes up the list, why broken up
-        sudo apt install -y "${pkgs_2[@]}"
+        sudo apt install -y "${pkgs[@]}"
         sudo apt install -y tftpd-hpa          # Needs this or PetaL whines
         sudo touch /var/lib/tftpboot
         sudo chown -R tftp /var/lib/tftpboot

@@ -1,4 +1,7 @@
 # Need to hold the kernal and updates from happening
+# This links were helpful:
+# - https://askubuntu.com/questions/742358/do-held-kernel-packages-upgrade-when-hw-specific-used-updates-are-present-in-the
+# - https://wiki.ubuntu.com/Kernel/FAQ#Kernel.2FFAQ.2FGeneralVersionMeaning.What_does_a_specific_Ubuntu_kernel_version_number_mean.3F
 sudo apt-mark hold linux-generic
 sudo apt-mark hold linux-image-generic
 sudo apt-mark hold linux-headers-generic
@@ -6,10 +9,10 @@ sudo apt-mark hold linux-image-6.2.0-26-generic
 sudo apt-mark hold linux-headers-6.2.0-26-generic
 sudo apt update -y
 
-sudo snap install htop -y   # nice to have
+sudo snap install htop   # nice to have
 sudo apt install build-essential -y
 sudo apt install openssh-server -y
-sudo apt install libstdc++6 libgtk2.0-0 dpkg-dev python-pip libtinfo5 libncurses5 -y
+sudo apt install python-pip libtinfo5 libncurses5 -y
 # sudo ln -s /usr/bin/make /usr/bin/gmake    # Maybe don't need?
 
 # Some more libraries listed from the following help articles
