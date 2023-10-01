@@ -29,4 +29,4 @@ echo "Install Vivado/Vitus now..."
 
 echo "After your install, run the cable driver script at <PATH_TO_VIVADO>/2023.1/data/xicom/cable_drivers/lin64/install_script/install_drivers/"
 echo "As sudo, run ./install_drivers"
-echo "Make sure to put the Digilent board files in <PATH_TO_VIVADO>/2023.1/data/boards/"
+echo "Make sure to put the Digilent board files (https://github.com/Digilent/vivado-boards) in <PATH_TO_VIVADO>/2023.1/data/boards/board_files/"
